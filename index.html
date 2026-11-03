@@ -15,10 +15,11 @@
     html, body { margin: 0; width: 100%; min-height: 100%; background: #10090d; color: var(--ink); }
     body { min-height: 100svh; overflow: hidden; font-family: "DM Sans", sans-serif; }
     body::before { content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(ellipse at 50% 54%, rgba(90, 34, 57, .25), transparent 56%), linear-gradient(180deg, #10090d 0%, #160b11 56%, #0d090c 100%); }
-    #screen { position: fixed; inset: 0; z-index: 1; display: block; width: 100vw; height: 100svh; cursor: default; }
-    .intro { position: fixed; inset: 0; z-index: 5; display: grid; place-items: center; padding: max(24px, env(safe-area-inset-top)) 24px max(24px, env(safe-area-inset-bottom)); background: radial-gradient(ellipse at 50% 44%, rgba(82, 35, 55, .48), rgba(16, 9, 13, .94) 68%); transition: opacity .8s ease, visibility .8s ease; }
+    #screen { position: fixed; inset: 0; z-index: 1; display: block; width: 100vw; height: 100svh; cursor: default; background: linear-gradient(180deg, rgba(16, 9, 13, .26), rgba(16, 9, 13, .58)), url("assets/priya-together.jpeg") center 44% / cover no-repeat; }
+    .intro { position: fixed; inset: 0; z-index: 5; display: grid; place-items: center; padding: max(24px, env(safe-area-inset-top)) 24px max(24px, env(safe-area-inset-bottom)); background: rgba(16, 9, 13, .25); overflow: hidden; transition: opacity .8s ease, visibility .8s ease; }
+    .intro::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(16, 9, 13, .34), rgba(16, 9, 13, .62)), url("assets/priya-portrait.jpeg") center 43% / cover no-repeat; transform: scale(1.02); }
     .intro.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
-    .intro-card { width: min(100%, 440px); text-align: center; animation: arrive 1s both; }
+    .intro-card { position: relative; z-index: 1; width: min(100%, 440px); padding: 28px 22px; border: 1px solid rgba(255, 225, 234, .14); border-radius: 28px; background: rgba(16, 9, 13, .44); box-shadow: 0 20px 70px rgba(0,0,0,.24); backdrop-filter: blur(7px); text-align: center; animation: arrive 1s both; }
     .eyebrow { color: #e4aabe; text-transform: uppercase; letter-spacing: .2em; font-size: .68rem; font-weight: 700; }
     h1, .closing-line { font: 500 clamp(2.65rem, 12vw, 4rem)/1.05 "Playfair Display", Georgia, serif; letter-spacing: -.045em; }
     .intro h1 { margin: 18px 0 14px; }

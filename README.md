@@ -2,6 +2,8 @@
 
 A personal, phone-friendly ASCII lily experience. Priya opens the page on your note, taps **Open your flowers**, and watches the bouquet grow and bloom. She can pause, replay, start over, or choose blush, moonlight, and garden colours. The final note appears after the blooms open.
 
+The solo portrait is used behind the opening note, and the photo together is used behind the flower animation. Both images are in `assets/`.
+
 ## Run it
 
 Open `index.html` in a browser, or serve this folder with any static web server. There are no build tools or dependencies.

@@ -498,9 +498,9 @@
     drawScene(octx, S, pal);
 
     const data = octx.getImageData(0, 0, cols, rows).data;
+    sctx.setTransform(1, 0, 0, 1, 0, 0);
+    sctx.clearRect(0, 0, screen.width, screen.height);
     sctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    sctx.fillStyle = '#10090d';
-    sctx.fillRect(0, 0, screen.width, screen.height);
     // soft glow of the same image underneath the glyphs, like a CRT bloom
     sctx.save();
     sctx.globalAlpha = 0.42;
